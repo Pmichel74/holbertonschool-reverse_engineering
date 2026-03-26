@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Source messages.sh en premier (fail-fast si absent)
-source ./messages.sh || { echo "Error: messages.sh not found."; exit 1; }
+source "$(dirname "$0")/messages.sh" || { echo "Error: messages.sh not found."; exit 1; }
 
 # Vérification de l'argument
 if [ -z "$1" ]; then
